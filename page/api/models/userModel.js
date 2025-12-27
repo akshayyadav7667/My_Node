@@ -18,6 +18,11 @@ const userShema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    dob: {
+      type: Date,
+      required: true,
+    },
+
   },
   { timestamps: true }
 );
