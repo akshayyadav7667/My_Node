@@ -73,7 +73,11 @@ export const login = async (req, res) => {
 };
 
 export const getAllUsers = async (req, res) => {
+    const search= req.query
   try {
+    
+    console.log(search)
+    
     const response = await User.find({}).select("-password");
 
     // console.log(response);

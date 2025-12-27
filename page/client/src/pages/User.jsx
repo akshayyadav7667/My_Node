@@ -11,7 +11,7 @@ export default function User() {
 
   const fetchAllUsers = async (req, res) => {
     try {
-      const result = await axios.get(`http://localhost:7000/api/user/all?${query}`);
+      const result = await axios.get(`http://localhost:7000/api/user/all?search=${query}`);
       //   console.log(data);
 
       //   if(response)
@@ -29,7 +29,7 @@ export default function User() {
 
   useEffect(() => {
     fetchAllUsers();
-  }, []);
+  },[query]);
 
   return (
     <div className=" min-h-screen py-5 px-[5%] ">
